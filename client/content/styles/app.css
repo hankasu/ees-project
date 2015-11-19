@@ -1,0 +1,41 @@
+/* Styles go here */
+
+body {
+  padding:15px;
+  font-size:1em;
+}
+.thumb {
+  width:120px;
+  height:80px;
+}
+.thumb-xs {
+  width:36px;
+  height:36px;
+}
+.title {
+  font-size:1.4em;
+}
+.low-padding {
+  padding:6px;
+}
+.btn-space {
+  margin:1px;
+}
+.target-div {
+  height:50px;
+  width:50px;
+  border:1px solid yellow;
+}
+ .input-xs {
+    height: 20px;
+    padding: 2px 5px;
+    font-size:1.2em;
+    line-height: 1.2;
+    border-radius: 3px;
+  }
+.movable {
+  cursor:move;
+}
+.over {
+  border:1px dashed #000;
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html ng-app='ees_project'>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EES Project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script data-require="jquery-ui@*" data-semver="1.11.2" src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link data-require="jquery-ui@*" data-semver="1.11.2" rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"
+  />
+  <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+  />
+  <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/sandstone/bootstrap.min.css"
+  />
+  <link data-require="bootstrap@*" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+  />
+  <script data-require="bootstrap@*" data-semver="3.3.5" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script data-require="angular.js@1.4.7" data-semver="1.4.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+  <link rel="stylesheet" href="content/styles/app.css" />
+  <link rel="stylesheet" href="content/styles/autocomplete.css" />
+</head>
+
+<body ng-controller="Main as vm">
+  <div class="row">
+    <div class="col-sm-6 col-xs-12 col-med-4 col-lg-4">
+      <div id="dragTarget" class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title">
+            <a role="label" href="#colPanel" data-toggle="collapse">
+        Task {{vm.task.name}}
+        <span class="pull-right">Total: {{vm.task.total | currency}}</span>
+        </a>
+          </div>
+        </div>
+        <div id="colPanel" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="list-group ">
+              <li class="list-group-item low-padding" ng-repeat="resource in vm.task.resources">
+                <div class="media">
+                  <div class="media-left">
+                    <img class="media-object thumb-xs" src="content/images/{{resource.img}}"" alt="" />
+                  </div>
+                  <div class="media-body">
+                    <span class="media-heading title">{{resource.name}} @ {{resource.hours}}</span>
+                    <span class="title pull-right">{{resource.rate * resource.hours | currency}}</span>
+                    <br />
+                    <span>{{resource.candidates}}</span>
+                    <button class="btn btn-danger btn-xs pull-right btn-space">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                    <button class="btn btn-warning btn-xs pull-right btn-space">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <br />
+            </ul>
+            <button class="btn btn-xs btn-success pull-right">Add a Resource
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h5>Select a resource and drag to the task</h5>
+  <div class="row">
+    <div id="resource" class="col-xs-6 col-sm-6 col-md-4 movable" draggable="true">
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <div class="panel-title">Select A Resource</div>
+        </div>
+        <div class="panel-body">
+          <div class="input-group input-group-sm">
+            <label for="resName">Enter resource</label>
+            <input id="resName" name="resName" type="text" class="form-control" />
+          </div><br/>
+          <div class="input-group input-group-sm">
+            <label for="resHours">Enter hours</label>
+            <input id="resHours" name="resHours" class="form-control" type="text"/>
+          </div>
+          <hr/>
+          <button class="btn btn-danger btn-xs">Clear <span class="glyphicon glyphicon-remove-sign"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="app/index.js"></script>
+    <script src="app/ees_project.js"></script>
+</body>
+
+</html>

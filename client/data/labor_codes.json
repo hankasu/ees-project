@@ -1,0 +1,203 @@
+{"laborCodes": [
+    {
+      "value": "ADM1",
+      "name": "Administrative I"
+    },
+    {
+      "value": "ADM2",
+      "name": "Administrative II"
+    },
+    {
+      "value": "BFC1",
+      "name": "Biological Field Coordinator"
+    },
+    {
+      "value": "BIO1",
+      "name": "Biologist I"
+    },
+    {
+      "value": "BIO2",
+      "name": "Biologist II"
+    },
+    {
+      "value": "BIO3",
+      "name": "Biologist III"
+    },
+    {
+      "value": "BIO4",
+      "name": "Biologist IV"
+    },
+    {
+      "value": "BIOT",
+      "name": "Biological Technician"
+    },
+    {
+      "value": "BOT1",
+      "name": "Botanist I"
+    },
+    {
+      "value": "BOT2",
+      "name": "Botanist II"
+    },
+    {
+      "value": "BOT3",
+      "name": "Botanist III"
+    },
+    {
+      "value": "COM1",
+      "name": "Communications Specialist"
+    },
+    {
+      "value": "DIS2",
+      "name": "Discount"
+    },
+    {
+      "value": "DISC",
+      "name": "Discount for Non Profit"
+    },
+    {
+      "value": "ECO1",
+      "name": "Ecologist I"
+    },
+    {
+      "value": "ECO2",
+      "name": "Ecologist II"
+    },
+    {
+      "value": "ECO3",
+      "name": "Ecologist III"
+    },
+    {
+      "value": "ENP1",
+      "name": "Environmental Planner I"
+    },
+    {
+      "value": "ENP2",
+      "name": "Environmental Planner II"
+    },
+    {
+      "value": "ENP3",
+      "name": "Environmental Planner III"
+    },
+    {
+      "value": "ENS1",
+      "name": "Environmental Scientist I"
+    },
+    {
+      "value": "ENS2",
+      "name": "Environmental Scientist II"
+    },
+    {
+      "value": "ENS3",
+      "name": "Environmental Scientist III"
+    },
+    {
+      "value": "FOR1",
+      "name": "Forester I"
+    },
+    {
+      "value": "FOR2",
+      "name": "Forester II"
+    },
+    {
+      "value": "GEO1",
+      "name": "Geologist"
+    },
+    {
+      "value": "GEO2",
+      "name": "Sr. Geologist"
+    },
+    {
+      "value": "GIS1",
+      "name": "GIS Specialist I"
+    },
+    {
+      "value": "GIS2",
+      "name": "GIS Specialist II"
+    },
+    {
+      "value": "GIS3",
+      "name": "GIS Specialist III"
+    },
+    {
+      "value": "HYD1",
+      "name": "Hydrologist I"
+    },
+    {
+      "value": "HYD2",
+      "name": "Hydrologist II"
+    },
+    {
+      "value": "PGM1",
+      "name": "Program Manager"
+    },
+    {
+      "value": "PJM1",
+      "name": "Project Manager"
+    },
+    {
+      "value": "PJM2",
+      "name": "Senior Project Manager"
+    },
+    {
+      "value": "PRN1",
+      "name": "Principal"
+    },
+    {
+      "value": "PTM1",
+      "name": "Project Task Manager"
+    },
+    {
+      "value": "PUB1",
+      "name": "Public Participation Specialis"
+    },
+    {
+      "value": "REG1",
+      "name": "Regulatory Specialist"
+    },
+    {
+      "value": "SMCW",
+      "name": "Subject Matter Expert CWA"
+    },
+    {
+      "value": "SMNE",
+      "name": "Subject Matter Expert NEPA"
+    },
+    {
+      "value": "SOC1",
+      "name": "Socioeconomics Specialist"
+    },
+    {
+      "value": "SRS2",
+      "name": "Sr Regulatory Specialist II"
+    },
+    {
+      "value": "TCPM",
+      "name": "Technical Content Program Mana"
+    },
+    {
+      "value": "TEC1",
+      "name": "Technical Editor I"
+    },
+    {
+      "value": "TEC2",
+      "name": "Technical Editor II"
+    },
+    {
+      "value": "VIS1",
+      "name": "Visual Resources Specialist"
+    },
+    {
+      "value": "WLS1",
+      "name": "Wetland Scientist I"
+    },
+    {
+      "value": "WLS2",
+      "name": "Wetland Scientist II"
+    },
+    {
+      "value": "WLS3",
+      "name": "Wetland Scientist III"
+    }
+  ]
+}
