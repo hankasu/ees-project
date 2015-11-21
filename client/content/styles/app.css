@@ -4,6 +4,9 @@ body {
   padding:15px;
   font-size:1em;
 }
+.og-img-background {
+  background-image: url("../images/Cluster_bldg.jpg");
+}
 .thumb {
   width:120px;
   height:80px;
@@ -17,6 +20,7 @@ body {
 }
 .low-padding {
   padding:6px;
+  margin:4px;
 }
 .btn-space {
   margin:1px;

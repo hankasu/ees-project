@@ -40,6 +40,12 @@ public class LaborCode {
   public string Name { get; set; }
   [JsonProperty("value")]
   public string Value { get; set; }
+  [JsonProperty("rate")]
+  public double Rate { get; set; }
+  [JsonProperty("img")]
+  public string Image { get; set; }
+  [JsonProperty("employees")]
+  public string Employees { get; set; }
 }
 
 public class LaborCodes {

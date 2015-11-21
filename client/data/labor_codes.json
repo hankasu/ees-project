@@ -1,202 +1,289 @@
 {"laborCodes": [
     {
       "value": "ADM1",
+      "img":"admin.jpg",
+      "rate": 35.0,
+      "employees":"Interns",
       "name": "Administrative I"
     },
     {
       "value": "ADM2",
+      "img":"admin.jpg",
+      "rate": 44.0,
+      "employees":"Richburg, White, Hoff, Oldstone",
       "name": "Administrative II"
     },
     {
-      "value": "BFC1",
-      "name": "Biological Field Coordinator"
-    },
-    {
       "value": "BIO1",
+      "img":"biology.jpg",
+      "rate": 70.0,
+      "employees":"Rohwer, Dodge, Zabka, Hillyer, Frye",
       "name": "Biologist I"
     },
     {
       "value": "BIO2",
+      "img":"biology.jpg",
+      "rate": 75.0,
+      "employees":"Smith, Watts Cosper",
       "name": "Biologist II"
     },
     {
       "value": "BIO3",
+      "img":"biology.jpg",
+      "rate": 85.0,
+      "employees":"Friedley",
       "name": "Biologist III"
     },
     {
       "value": "BIO4",
+      "img":"biology.jpg",
+      "rate": 95.0,
+      "employees":"Caddis, Herring",
       "name": "Biologist IV"
     },
     {
       "value": "BIOT",
+      "img":"biology.jpg",
+      "rate": 70.0,
+      "employees":"Subcontractors",
       "name": "Biological Technician"
     },
     {
       "value": "BOT1",
+      "img":"botany.jpg",
+      "rate": 70.0,
+      "employees":"",
       "name": "Botanist I"
     },
     {
       "value": "BOT2",
+      "img":"botany.jpg",
+      "rate": 75.0,
+      "employees":"Smith, Watts Cosper",
       "name": "Botanist II"
     },
     {
       "value": "BOT3",
+      "img":"botany.jpg",
+      "rate": 85.0,
+      "employees":"Friedley",
       "name": "Botanist III"
     },
     {
       "value": "COM1",
+      "img":"",
+      "rate": 105.0,
+      "employees":"B",
       "name": "Communications Specialist"
     },
     {
-      "value": "DIS2",
-      "name": "Discount"
-    },
-    {
-      "value": "DISC",
-      "name": "Discount for Non Profit"
-    },
-    {
       "value": "ECO1",
+      "img":"",
+      "rate": 70.0,
+      "employees":"",
       "name": "Ecologist I"
     },
     {
       "value": "ECO2",
+      "img":"",
+      "rate": 75.0,
+      "employees":"Smith",
       "name": "Ecologist II"
     },
     {
       "value": "ECO3",
+      "img":"",
+      "rate": 85.0,
+      "employees":"",
       "name": "Ecologist III"
     },
     {
       "value": "ENP1",
+      "img":"",
+      "rate": 70.0,
+      "employees":"",
       "name": "Environmental Planner I"
     },
     {
       "value": "ENP2",
+      "img":"",
+      "rate": 75.0,
+      "employees":"",
       "name": "Environmental Planner II"
     },
     {
       "value": "ENP3",
+      "img":"",
+      "rate": 80.0,
+      "employees":"Freeman",
       "name": "Environmental Planner III"
     },
     {
       "value": "ENS1",
+      "img":"",
+      "rate": 70.0,
+      "employees":"Rohwer",
       "name": "Environmental Scientist I"
     },
     {
       "value": "ENS2",
+      "img":"",
+      "rate": 85.0,
+      "employees":"Smith, Unterreiner",
       "name": "Environmental Scientist II"
     },
     {
       "value": "ENS3",
+      "img":"",
+      "rate": 110.0,
+      "employees":"Fox",
       "name": "Environmental Scientist III"
     },
     {
-      "value": "FOR1",
-      "name": "Forester I"
-    },
-    {
-      "value": "FOR2",
-      "name": "Forester II"
-    },
-    {
-      "value": "GEO1",
-      "name": "Geologist"
-    },
-    {
-      "value": "GEO2",
-      "name": "Sr. Geologist"
-    },
-    {
       "value": "GIS1",
+      "img":"gis.jpg",
+      "rate": 70.0,
+      "employees":"",
       "name": "GIS Specialist I"
     },
     {
       "value": "GIS2",
+      "img":"gis.jpg",
+      "rate": 75.0,
+      "employees":"Gartner",
       "name": "GIS Specialist II"
     },
     {
       "value": "GIS3",
+      "img":"gis.jpg",
+      "rate": 80.0,
+      "employees":"Howley, Colomb",
       "name": "GIS Specialist III"
     },
     {
       "value": "HYD1",
+      "img":"",
+      "rate": 90.0,
+      "employees":"Subcontractors",
       "name": "Hydrologist I"
     },
     {
-      "value": "HYD2",
-      "name": "Hydrologist II"
-    },
-    {
       "value": "PGM1",
+      "img":"project_management.jpg",
+      "rate": 110.0,
+      "employees":"Fitzgerald",
       "name": "Program Manager"
     },
     {
       "value": "PJM1",
+      "img":"project_management.jpg",
+      "rate": 100.0,
+      "employees":"Burak, Fox, Herring, Knox, Watts, Smith, Zahratka",
       "name": "Project Manager"
     },
     {
       "value": "PJM2",
+      "img":"project_management.jpg",
+      "rate": 105.0,
+      "employees":"Wolf, Caddis, Dunmire, Taschek",
       "name": "Senior Project Manager"
     },
     {
       "value": "PRN1",
+      "img":"project_management.jpg",
+      "rate": 115.0,
+      "employees":"Fitzgerald",
       "name": "Principal"
     },
     {
-      "value": "PTM1",
-      "name": "Project Task Manager"
-    },
-    {
       "value": "PUB1",
-      "name": "Public Participation Specialis"
+      "img":"project_management.jpg",
+      "rate": 110.0,
+      "employees":"Wolf",
+      "name": "Public Participation Specialist"
     },
     {
       "value": "REG1",
+      "img":"",
+      "rate": 70.0,
+      "employees":"B",
       "name": "Regulatory Specialist"
     },
     {
       "value": "SMCW",
+      "img":"",
+      "rate": 125.0,
+      "employees":"Fitzgerald",
       "name": "Subject Matter Expert CWA"
     },
     {
       "value": "SMNE",
+      "img":"",
+      "rate": 125.0,
+      "employees":"Fitzgerald, Dunmire, Caddis, Herring",
       "name": "Subject Matter Expert NEPA"
     },
     {
       "value": "SOC1",
+      "img":"",
+      "rate": 115.0,
+      "employees":"Dunmire",
       "name": "Socioeconomics Specialist"
     },
     {
       "value": "SRS2",
+      "img":"",
+      "rate": 70.0,
+      "employees":"",
       "name": "Sr Regulatory Specialist II"
     },
     {
       "value": "TCPM",
-      "name": "Technical Content Program Mana"
+      "img":"",
+      "rate": 95.0,
+      "employees":"Wolf, Dunmire, Herring, Fox, Burak, Friedley, Smith, Caddis, Zahratka",
+      "name": "Technical Content Program Manager"
     },
     {
       "value": "TEC1",
+      "img":"tech_editing.jpg",
+      "rate": 70.0,
+      "employees":"",
       "name": "Technical Editor I"
     },
     {
       "value": "TEC2",
+      "img":"tech_editing.jpg",
+      "rate": 82.0,
+      "employees":"Lancaster, Burak, Sullivan",
       "name": "Technical Editor II"
     },
     {
       "value": "VIS1",
-      "name": "Visual Resources Specialist"
+      "img":"",
+      "rate":110.0,
+      "employees":"Caddis",
+      "name": "Visual Resource Specialist"
     },
     {
       "value": "WLS1",
+      "img":"wetland.jpg",
+      "rate": 70.0,
+      "employees":"B",
       "name": "Wetland Scientist I"
     },
     {
       "value": "WLS2",
+      "img":"wetland.jpg",
+      "rate": 80.0,
+      "employees":"Smith",
       "name": "Wetland Scientist II"
     },
     {
       "value": "WLS3",
+      "img":"wetland.jpg",
+      "rate": 85.0,
+      "employees":"Friedley",
       "name": "Wetland Scientist III"
     }
   ]

@@ -9,28 +9,10 @@ function init() {
   $('#dragTarget').on('dragleave', handleDragLeave);
   $('#dragTarget').on('drop', handleDrop);
   $('#resource').on('dragend', handleDragEnd);
+  $('#resName').on('focus', function () {
+    $('#resName').val('');
+  });
   
-  //set autocomplete
-  setAutocomplete();
-}
-
-function setAutocomplete(){
-	$('#resName')
-	  .autocomplete({
-      source: function (request, response) {
-          $.getJSON('data_service.ashx', request, function (data) {
-              var suggestions = [];
-              $.each(data, function (i, val) {
-                  suggestions.push({ label: val.name, id: val.value });
-              });
-              response(suggestions);
-          });
-      },
-      minLength: 1,
-      select: function (event, ui) {
-        //set the input
-      }
-  });	//end autocomplete
 }
 
 function handleDragStart(e) {
