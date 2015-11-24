@@ -27,7 +27,22 @@
 		vm.removeFromTask = removeFromTask;
 		vm.clear = clearResource;
 		vm.editResource = editResource;
+		vm.resourceVisible = true;
+		vm.toggleResource = toggleResource;
+		vm.showProject = false;
 
+		function toggleResource() {
+			var ele = $('#resource');
+			if(vm.resourceVisible) {
+				
+				ele.hide('slide', {}, 1000);
+				
+			} else {
+				ele.show('slide', {}, 500);
+			}
+			vm.resourceVisible = !vm.resourceVisible;
+		}
+		
 		function editResource(index) {
 			vm.isEdit = true;
 			vm.addResource = vm.task.resources[index];

@@ -22,7 +22,7 @@ public class data_service : IHttpHandler {
           
         var filteredCodes =
           from o in lc.Codes
-          where o.Name.Contains(queryValue)
+          where o.Name.ToUpper().Contains(queryValue.ToUpper())
           select o;
         context.Response.Write(JsonConvert.SerializeObject(filteredCodes));
     }

@@ -18,7 +18,43 @@
   <link rel="stylesheet" href="content/styles/app.css" />
   <link rel="stylesheet" href="content/styles/autocomplete.css" />
 </head>
-<body ng-controller="Main as vm">
+<body role="document" ng-controller="Main as vm">
+      <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ecosphere Project Proposal Creator </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Sharepoint</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Business Portal</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" ng-click="vm.showProject">Create a Project</a></li>
+                <li><a href="#">Add a New Client</a></li>
+                <li><a href="#">Create a Proposal</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<div class="page-header">
+  .label
+</div>
   <div class="row">
     <div class="col-sm-6 col-xs-12 col-med-4 col-lg-4">
       <div id="dragTarget" class="panel panel-default og-img-background">
@@ -54,7 +90,7 @@
               </li>
               <br />
             </ul>
-            <button class="btn btn-xs btn-success pull-right">Add a Resource
+            <button class="btn btn-xs btn-success pull-right" ng-click="vm.toggleResource()">Add a Resource
               <span class="glyphicon glyphicon-plus"></span>
             </button>
           </div>
