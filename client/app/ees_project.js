@@ -1,18 +1,23 @@
 (function () {
 	'use strict';
 
-	angular.module('ees_project', [])
+	angular.module('ees_project', ['ngAnimate', 'xeditable'])
+		.run(function (editableOptions, editableThemes) {
+			editableThemes.bs3.inputClass = 'input-sm';
+			editableThemes.bs3.buttonsClass = 'btn-sm';
+			editableOptions.theme = 'bs3';
+		})
 		.controller('Main', Main);
 
 	Main.$inject = ['$scope'];
 	function Main($scope) {
 		var vm = this;
 		vm.isEdit = false;
-		vm.task = {
-			name: "Bio Surveys",
-			img: "",
-			total: 0,
-			resources: []
+		vm.project = {
+			name: 'Click to add a title',
+			client: '',
+			totalCost: '',
+			tasks: []
 		};
 
 		vm.addResource = {
@@ -21,28 +26,36 @@
 			img: "",
 			hours: 0,
 			employees: "",
-			index:0
+			index: 0
 		};
+		vm.addTask = addTask;
 		vm.addToTask = addToTask;
 		vm.removeFromTask = removeFromTask;
 		vm.clear = clearResource;
 		vm.editResource = editResource;
-		vm.resourceVisible = true;
+		vm.resourceVisible = false;
 		vm.toggleResource = toggleResource;
 		vm.showProject = false;
 
+		activate();
+
+		function activate() {
+			setAutocomplete();
+		}
+
 		function toggleResource() {
 			var ele = $('#resource');
-			if(vm.resourceVisible) {
-				
+			if (vm.resourceVisible) {
+
 				ele.hide('slide', {}, 1000);
-				
+
 			} else {
 				ele.show('slide', {}, 500);
+				$('#resName').focus();
 			}
 			vm.resourceVisible = !vm.resourceVisible;
 		}
-		
+
 		function editResource(index) {
 			vm.isEdit = true;
 			vm.addResource = vm.task.resources[index];
@@ -53,13 +66,27 @@
 			calcTotal();
 		}
 
-		function addToTask(resource) {
-			if (!vm.isEdit) {
-				vm.task.resources.push(resource);
-			}
+		function addToTask(resource, taskId) {
+
+			vm.project.tasks[taskId].resources.push(resource);
+
 			clearResource();
 			vm.isEdit = false;
 			calcTotal();
+		}
+
+		function addTask() {
+
+			var task = {
+				name: '',
+				img: '',
+				total: 0,
+				resources: []
+			};
+
+			vm.project.tasks.push(task);
+			//$scope.$apply();
+
 		}
 
 		function clearResource() {
@@ -69,12 +96,16 @@
 		}
 
 		function calcTotal() {
-			vm.task.total = 0;
-			angular.forEach(vm.task.resources, function (value, i) {
-				vm.task.total += value.rate * value.hours;
+			vm.project.totalCost = 0;
+			angular.forEach(vm.project.tasks, function (task, i) {
+				task.total = 0;
+				angular.forEach(task.resources, function (resource, i) {
+					task.total += resource.rate * resource.hours;
+				});
+				vm.project.totalCost += task.total;
 			});
+
 		}
-		setAutocomplete();
 
 		function setAutocomplete() {
 			$('#resName')
@@ -89,8 +120,8 @@
 									rate: val.rate,
 									img: val.img,
 									employees: val.employees,
-									index:i
-									
+									index: i
+
 								});
 							});
 							response(suggestions);
@@ -104,7 +135,7 @@
 							hours: 0,
 							img: ui.item.img,
 							employees: ui.item.employees,
-							index:ui.item.index
+							index: ui.item.index
 						};
 						$scope.$apply();
 					}

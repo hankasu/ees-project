@@ -1,0 +1,119 @@
+<!doctype html>
+<html ng-app='ees_project'>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EES Project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script data-require="jquery@*" data-semver="2.1.4" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script data-require="jquery-ui@*" data-semver="1.11.2" src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  <link data-require="jquery-ui@*" data-semver="1.11.2" rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css"
+  />
+  <link data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+  <link data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.5/sandstone/bootstrap.min.css"
+  />
+  <link data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+  <script data-require="bootstrap@*" data-semver="3.3.5" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script data-require="angular.js@1.4.7" data-semver="1.4.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+  <link rel="stylesheet" href="content/styles/app.css" />
+  <link rel="stylesheet" href="content/styles/autocomplete.css" />
+</head>
+
+<body role="document">
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+        aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Ecosphere Project Proposal Creator </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Sharepoint</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Business Portal</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" ng-click="vm.showProject">Create a Project</a></li>
+              <li><a href="#">Add a New Client</a></li>
+              <li><a href="#">Create a Proposal</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="page-header" ng-controller="Project as pvm">
+    <h3 contenteditable="true" ng-model='pvm.name'>Click to add a name</h3>
+    <button class="btn btn-primary" ng-click="pvm.addTask()">Add a task <span class="glyphicon glyphicon-plus"></span></button>
+  </div>
+  <div class="row">
+    <div ng-repeat="task in pvm.tasks">
+    <div ng-controller="Task as tvm">
+      <div id="dragTarget" class="panel panel-default og-img-background">
+        <div class="panel-heading">
+          <div class="panel-title title-text">
+            <a role="label" href="#colPanel" data-toggle="collapse">
+        Task {{tvm.task.name}}
+        <span class="pull-right">Total: {{tvm.task.total | currency}}</span>
+        </a>
+          </div>
+        </div>
+        <div id="colPanel" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <ul class="list-group ">
+              <li class="list-group-item low-padding" ng-repeat="resource tvm.resources">
+                <div class="media">
+                  <div class="media-left">
+                    <img class="media-object thumb-xs" ng-src="content/images/{{resource.img}}" alt="" />
+                  </div>
+                  <div class="media-body">
+                    <span class="media-heading title">{{resource.name}} @ {{resource.hours}}</span>
+                    <span class="title pull-right">{{resource.rate * resource.hours | currency}}</span>
+                    <br />
+                    <span>{{resource.employees}}</span>
+                    <button ng-click="vm.removeFromTask($index)" class="btn btn-danger btn-xs pull-right btn-space">
+                      <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                    <button ng-click="vm.editResource($index)" class="btn btn-warning btn-xs pull-right btn-space">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <br />
+            </ul>
+            <button class="btn btn-xs btn-success pull-right" ng-click="vm.toggleResource()">Add a Resource
+              <span class="glyphicon glyphicon-plus"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div ng-controller="Resource as rvm"></div>
+  </div>
+  <script src="app/app.module.js"></script>
+  <script src="app/project_model.js"></script>
+  <script src="app/project_controller.js"></script>
+  <script src="app/task_controller.js"></script>
+  <script src="app/resource_controller.js"></script>
+</body>
+
+</html>

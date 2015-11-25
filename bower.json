@@ -1,5 +1,7 @@
 {
   "name": "ees_project",
   "version": "0.0.1",
-  "dependencies": {}
+  "dependencies": {
+    "angular-xeditable": "~0.1.9"
+  }
 }
